@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -57,8 +58,15 @@ export default function Home() {
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-ink/88 text-white backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 sm:px-8">
           <Link href="/" className="flex items-center gap-3" aria-label="SKALYAR home">
-            <span className="grid h-9 w-9 place-items-center rounded bg-white text-sm font-black text-ink">
-              S
+            <span className="relative h-10 w-10 overflow-hidden rounded border border-white/12 bg-ink">
+              <Image
+                src="/skalyar-logo.jpeg"
+                alt="SKALYAR logo"
+                fill
+                priority
+                sizes="40px"
+                className="object-cover"
+              />
             </span>
             <span className="text-sm font-semibold tracking-[0.18em]">SKALYAR</span>
           </Link>

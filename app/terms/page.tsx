@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 const sections = [
@@ -37,7 +38,16 @@ export default function TermsPage() {
     <main className="min-h-screen bg-mist text-ink">
       <header className="border-b border-line bg-white">
         <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-5 sm:px-8">
-          <Link href="/" className="text-sm font-semibold tracking-[0.18em]">
+          <Link href="/" className="flex items-center gap-3 text-sm font-semibold tracking-[0.18em]">
+            <span className="relative h-9 w-9 overflow-hidden rounded bg-ink">
+              <Image
+                src="/skalyar-logo.jpeg"
+                alt="SKALYAR logo"
+                fill
+                sizes="36px"
+                className="object-cover"
+              />
+            </span>
             SKALYAR
           </Link>
           <Link href="/" className="text-sm font-medium text-ink/62 hover:text-ink">
